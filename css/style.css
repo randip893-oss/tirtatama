@@ -1,0 +1,47 @@
+/* === VARIABEL TEMA === */
+:root {
+  --warna-utama: #1a56db;
+  --warna-aksen: #ff6b35;
+  --warna-teks: #1f2937;
+  --warna-bg: #ffffff;
+  --font-utama: 'Inter', sans-serif;
+  --radius: 8px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* === RESET & BASE === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+}
+
+body {
+  font-family: var(--font-utama);
+  color: var(--warna-teks);
+  line-height: 1.6;
+}
+/* === LAYOUT UTAMA === */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* === GRID LAYANAN === */
+.grid-layanan {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* === TABLET (max 768px) === */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hero h1 { font-size: 2rem; }
+}
+
+/* === MOBILE (max 480px) === */
+@media (max-width: 480px) {
+  .hero h1 { font-size: 1.5rem; }
+  .container { padding: 0 1rem; }
+}
