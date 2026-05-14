@@ -48,31 +48,49 @@ function showToast(msg) {
   }, 3500);
 }
 
+// Fungsi kirim WA
 function handleSubmit(event) {
-  event.preventDefault(); // Cegah refresh halaman
-
-  // Ambil data form
-  const nama = document.getElementById('nama').value;
-  const email = document.getElementById('email').value;
+  event.preventDefault();
+  
+  const nama = document.getElementById('nama').value.trim();
+  const email = document.getElementById('email').value.trim();
   const layanan = document.getElementById('layanan').value;
-  const pesan = document.getElementById('pesan').value;
+  const pesan = document.getElementById('pesan').value.trim();
+
+  // Validasi
+  if (!nama || !email || !layanan || !pesan) {
+    alert('Mohon lengkapi semua field!');
+    return;
+  }
 
   // Nomor WA kamu (ganti dengan nomor asli)
-  const nomorWA = '6287881482307';
+  const nomorWA = '6287881482307'; // Ganti nomor ini!
 
-  // Rangkai pesan
-  const textWA = `Halo Tirtatama, saya ingin konsultasi.%0A%0A` +
-                 `Nama: ${nama}%0A` +
-                 `Email: ${email}%0A` +
-                 `Layanan: ${layanan}%0A` +
-                 `Pesan: ${pesan}`;
+  // Pesan lengkap
+  const textWA = `🌊 *Konsultasi Tirtatama*\n\n` +
+                 `👤 Nama: ${nama}\n` +
+                 `📧 Email: ${email}\n` +
+                 `🎯 Layanan: ${layanan}\n` +
+                 `💬 Pesan: ${pesan}\n\n` +
+                 `Kirim dari website tirtatama.id`;
 
   // Buka WhatsApp
   const waLink = `https://wa.me/${nomorWA}?text=${encodeURIComponent(textWA)}`;
   window.open(waLink, '_blank');
+  
+  // Reset form
+  document.getElementById('kontak-form').reset();
+  
+  // Toast sukses
+  showToast('✅ WhatsApp terbuka! Silakan kirim pesan.');
+}
 
-  // Toast sukses (opsional)
-  showToast('Pesan siap dikirim di WhatsApp!');
+// Fungsi toast (tambahkan juga)
+function showToast(message) {
+  const toast = document.getElementById('toast');
+  toast.textContent = message;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 3000);
 }
 
 (function createParticles() {
