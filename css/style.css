@@ -70,3 +70,17 @@
   .nav-mobile.open { display: grid; gap: .8rem; }
   .nav-mobile a { color: #fff; padding: .6rem 0; }
 }
+.hidden { display: none !important; }
+
+.particle {
+  position: absolute;
+  bottom: -20px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0); }
+  to { transform: translateY(-120vh); }
+}
