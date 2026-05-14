@@ -48,41 +48,30 @@ function showToast(msg) {
   }, 3500);
 }
 
-// Fungsi kirim WA
 function handleSubmit(event) {
   event.preventDefault();
+  console.log("handleSubmit DIPANGGIL!"); // Test di console
   
-  const nama = document.getElementById('nama').value.trim();
-  const email = document.getElementById('email').value.trim();
+  const nama = document.getElementById('nama').value;
+  const email = document.getElementById('email').value;
   const layanan = document.getElementById('layanan').value;
-  const pesan = document.getElementById('pesan').value.trim();
-
-  // Validasi
-  if (!nama || !email || !layanan || !pesan) {
-    alert('Mohon lengkapi semua field!');
-    return;
-  }
-
-  // Nomor WA kamu (ganti dengan nomor asli)
-  const nomorWA = '6287881482307'; // Ganti nomor ini!
-
-  // Pesan lengkap
-  const textWA = `🌊 *Konsultasi Tirtatama*\n\n` +
-                 `👤 Nama: ${nama}\n` +
-                 `📧 Email: ${email}\n` +
-                 `🎯 Layanan: ${layanan}\n` +
-                 `💬 Pesan: ${pesan}\n\n` +
-                 `Kirim dari website tirtatama.id`;
-
-  // Buka WhatsApp
-  const waLink = `https://wa.me/${nomorWA}?text=${encodeURIComponent(textWA)}`;
+  const pesan = document.getElementById('pesan').value;
+  
+  console.log("Data:", {nama, email, layanan, pesan}); // Lihat data
+  
+  const nomorWA = '6287881482307'; // GANTI NOMOR INI!
+  const text = `Nama: ${nama}\nEmail: ${email}\nLayanan: ${layanan}\nPesan: ${pesan}`;
+  const waLink = `https://wa.me/${nomorWA}?text=${encodeURIComponent(text)}`;
+  
+  console.log("WA Link:", waLink); // Test link
   window.open(waLink, '_blank');
-  
-  // Reset form
-  document.getElementById('kontak-form').reset();
-  
-  // Toast sukses
-  showToast('✅ WhatsApp terbuka! Silakan kirim pesan.');
+}
+
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(()=>toast.classList.remove('show'), 3000);
 }
 
 // Fungsi toast (tambahkan juga)
