@@ -1,3 +1,6 @@
+code_fixed = """
+// Kode script.js LENGKAP & SIAP PAKAI untuk Tirtatama
+
 window.addEventListener('scroll', () => {
   const navbar = document.getElementById('navbar');
   const scrollTop = document.getElementById('scrollTop');
@@ -35,6 +38,7 @@ function filterIkan(kat, el) {
   });
 }
 
+// SATU FUNGSI showToast SAJA
 function showToast(msg) {
   const toast = document.getElementById('toast');
   if (!toast) return;
@@ -48,45 +52,48 @@ function showToast(msg) {
   }, 3500);
 }
 
+// FUNGSI handleSubmit SIAP KIRIM WA - GANTI NOMOR INI!
 function handleSubmit(event) {
   event.preventDefault();
-  console.log("handleSubmit DIPANGGIL!"); 
-  
-  const nama = document.getElementById('nama').value || 'Tidak diisi';
-  const email = document.getElementById('email').value || 'Tidak diisi';
-  const layanan = document.getElementById('layanan').value || 'Tidak dipilih';
-  const pesan = document.getElementById('pesan').value || 'Tidak ada pesan';
+  console.log("🚀 handleSubmit DIPANGGIL!");
 
-  console.log("Data:", {nama, email, layanan, pesan});
+  const nama = document.getElementById('nama').value.trim() || 'Tidak diisi';
+  const email = document.getElementById('email').value.trim() || 'Tidak diisi';
+  const layanan = document.getElementById('layanan').value || 'Tidak dipilih';
+  const pesan = document.getElementById('pesan').value.trim() || 'Tidak ada pesan';
+
+  console.log("📋 Data Form:", {nama, email, layanan, pesan});
+
+  // GANTI NOMOR INI DENGAN NOMOR WA KAMU!
+  const nomorWA = '6287881482307'; 
   
-  const nomorWA = '6287881482307'; // GANTI NOMOR INI DENGAN NOMOR KAMU!
-  
-  const textWA = `🌊 *Konsultasi Tirtatama*\n\n` +
-                 `👤 Nama: ${nama}\n` +
-                 `📧 Email: ${email}\n` +
-                 `🎯 Layanan: ${layanan}\n` +
-                 `💬 Pesan: ${pesan}`;
+  const textWA = `🌊 *KONSULTASI TIRTATAMA* 🌊%0A%0A` +
+                 `👤 *Nama:* ${nama}%0A` +
+                 `📧 *Email:* ${email}%0A` +
+                 `🎯 *Layanan:* ${layanan}%0A` +
+                 `💬 *Pesan:* ${pesan}%0A%0A` +
+                 `⏰ Dikirim: ${new Date().toLocaleString('id-ID')}%0A` +
+                 `💻 Dari: tirtatama.id`;
 
   const waLink = `https://wa.me/${nomorWA}?text=${encodeURIComponent(textWA)}`;
-  console.log("WA Link:", waLink);
+  console.log("🔗 WA Link:", waLink);
+
+  // BUK A WHATSAPP
+  const waWindow = window.open(waLink, '_blank');
   
-  window.open(waLink, '_blank');
-  
-  // Toast
-  const toast = document.getElementById('toast');
-  toast.textContent = '✅ WhatsApp terbuka dengan data!';
-  toast.classList.add('show');
-  setTimeout(()=>toast.classList.remove('show'), 3000);
+  if (waWindow) {
+    showToast('✅ WhatsApp terbuka! Tekan KIRIM di WA');
+    console.log('✅ WA berhasil dibuka');
+  } else {
+    showToast('❌ Popup diblokir! Izinkan popup browser');
+    console.log('❌ Popup diblokir');
+  }
+
+  // Reset form
+  document.getElementById('kontak-form').reset();
 }
 
-// Fungsi toast (tambahkan juga)
-function showToast(message) {
-  const toast = document.getElementById('toast');
-  toast.textContent = message;
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 3000);
-}
-
+// Particles hero
 (function createParticles() {
   const container = document.getElementById('particles');
   if (!container) return;
@@ -112,6 +119,7 @@ function showToast(message) {
   }
 })();
 
+// Active nav on scroll
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
 
@@ -128,3 +136,10 @@ window.addEventListener('scroll', () => {
     link.style.color = link.getAttribute('href') === '#' + current ? '#90e0ef' : '';
   });
 }, { passive: true });
+
+console.log('🐟 script.js Tirtatama SIAP PAKAI!');
+""";
+
+print("Kode script.js LENGKAP sudah dibuat")
+print("GANTI NOMOR WA di baris: const nomorWA = '6287881482307';")
+print("SAVE ke file script.js -> REFRESH halaman -> TEST!")
