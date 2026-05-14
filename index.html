@@ -1,40 +1,511 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Deskripsi bisnis Anda">
-  <title>Nama Bisnis Anda</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tirtatama — Solusi Perikanan &amp; Akuakultur Indonesia</title>
+  <meta name="description" content="Tirtatama menyediakan ikan segar berkualitas premium, layanan konsultasi akuakultur profesional, dan solusi budidaya modern."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-  <header>
-    <header class="navbar">
-  <div class="container">
-    <a href="#" class="logo">NamaBisnis</a>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#layanan">Layanan</a></li>
-        <li><a href="#tentang">Tentang</a></li>
-        <li><a href="#kontak" class="btn-cta">Hubungi</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
 
-<section id="hero">
-  <h1>Solusi Terbaik untuk Bisnis Anda</h1>
-  <p>Deskripsi singkat layanan atau produk unggulan.</p>
-  <a href="#kontak" class="btn-utama">Mulai Sekarang</a>
-</section>
-    </header>
-  <main>
-    <section id="hero"> ... </section>
-    <section id="layanan"> ... </section>
-    <section id="tentang"> ... </section>
-    <section id="kontak"> ... </section>
-  </main>
-  <footer> ... </footer>
-  <script src="js/main.js"></script>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#beranda" class="logo">
+        <div class="logo-icon">🐟</div>
+        Tirta<span>tama</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#layanan">Layanan</a></li>
+        <li><a href="#produk">Produk</a></li>
+        <li><a href="#budidaya">Budidaya</a></li>
+        <li><a href="#testimoni">Testimoni</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+      <a href="#kontak" class="btn-cta">Konsultasi Gratis</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="#beranda">Beranda</a>
+      <a href="#layanan">Layanan</a>
+      <a href="#produk">Produk</a>
+      <a href="#budidaya">Budidaya</a>
+      <a href="#testimoni">Testimoni</a>
+      <a href="#kontak">Kontak</a>
+      <a href="#kontak" class="btn-cta">Konsultasi Gratis</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="beranda">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+    <div class="hero-particles" id="particles"></div>
+
+    <div class="container hero-content">
+      <div class="hero-badge">Solusi Perikanan No.1 Indonesia</div>
+      <h1>Segar dari Laut,<br/><span class="highlight">Langsung ke Meja Anda</span></h1>
+      <p>Menyediakan ikan segar berkualitas premium, layanan konsultasi akuakultur profesional, dan solusi budidaya modern yang berkelanjutan untuk Indonesia.</p>
+      <div class="hero-btns">
+        <a href="#produk" class="btn-primary"><i class="fas fa-shopping-cart"></i> Lihat Produk</a>
+        <a href="#layanan" class="btn-ghost"><i class="fas fa-list-alt"></i> Layanan Kami</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><strong>500+</strong><span>Produk Ikan</span></div>
+        <div class="hstat-divider"></div>
+        <div class="hstat"><strong>1.200+</strong><span>Pelanggan</span></div>
+        <div class="hstat-divider"></div>
+        <div class="hstat"><strong>50+</strong><span>Mitra Nelayan</span></div>
+      </div>
+    </div>
+
+    <!-- Animated Wave -->
+    <div class="wave-container">
+      <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="120">
+        <defs>
+          <linearGradient id="waveGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#f0f9ff;stop-opacity:1"/>
+            <stop offset="100%" style="stop-color:#f0f9ff;stop-opacity:1"/>
+          </linearGradient>
+        </defs>
+        <g class="wave-animate">
+          <path d="M0,60 C120,100 240,20 360,60 C480,100 600,20 720,60 C840,100 960,20 1080,60 C1200,100 1320,20 1440,60 L1440,120 L0,120 Z" fill="#f0f9ff" opacity="0.9"/>
+          <path d="M1440,60 C1320,100 1200,20 1080,60 C960,100 840,20 720,60 C600,100 480,20 360,60 C240,100 120,20 0,60 L0,120 L1440,120 Z" fill="#f0f9ff" opacity="0.9"/>
+        </g>
+        <g class="wave-animate-2">
+          <path d="M0,80 C120,40 240,100 360,80 C480,60 600,100 720,80 C840,60 960,100 1080,80 C1200,60 1320,100 1440,80 L1440,120 L0,120 Z" fill="#f0f9ff" opacity="0.6"/>
+          <path d="M1440,80 C1320,40 1200,100 1080,80 C960,60 840,100 720,80 C600,60 480,100 360,80 C240,60 120,100 0,80 L0,120 L1440,120 Z" fill="#f0f9ff" opacity="0.6"/>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- LAYANAN -->
+  <section class="section services-bg" id="layanan">
+    <div class="container">
+      <div class="sec-title">
+        <span class="sec-badge">Apa yang Kami Tawarkan</span>
+        <h2>Layanan Unggulan <span class="accent-line"></span></h2>
+        <p>Solusi lengkap dari hulu ke hilir bisnis perikanan dan akuakultur Anda</p>
+      </div>
+      <div class="grid-3">
+        <div class="card-service">
+          <div class="cs-icon" style="background:linear-gradient(135deg,#e0f7fa,#b2ebf2);">🐟</div>
+          <h3>Penjualan Ikan Segar</h3>
+          <p>Ikan segar langsung dari nelayan dan tambak terpercaya, bebas formalin dan bahan pengawet berbahaya.</p>
+          <a href="#produk" class="cs-link">Lihat Produk <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="card-service featured">
+          <div class="cs-badge-top">Terpopuler</div>
+          <div class="cs-icon" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9);">🔬</div>
+          <h3>Konsultasi Akuakultur</h3>
+          <p>Pendampingan teknis dari ahli berpengalaman untuk optimasi tambak, pengendalian penyakit, dan peningkatan produksi.</p>
+          <a href="#kontak" class="cs-link">Konsultasi Sekarang <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="card-service">
+          <div class="cs-icon" style="background:linear-gradient(135deg,#fff8e1,#ffecb3);">🌱</div>
+          <h3>Solusi Budidaya</h3>
+          <p>Sistem budidaya intensif dan semi-intensif untuk udang, ikan bandeng, nila, lele, dan berbagai komoditas unggulan.</p>
+          <a href="#budidaya" class="cs-link">Pelajari Lebih <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="card-service">
+          <div class="cs-icon" style="background:linear-gradient(135deg,#fce4ec,#f8bbd0);">📦</div>
+          <h3>Distribusi &amp; Ekspor</h3>
+          <p>Jaringan distribusi ke pasar lokal dan ekspor dengan sistem rantai dingin terjaga dan kemasan higienis.</p>
+          <a href="#kontak" class="cs-link">Kerjasama <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="card-service">
+          <div class="cs-icon" style="background:linear-gradient(135deg,#ede7f6,#d1c4e9);">📡</div>
+          <h3>Monitoring IoT</h3>
+          <p>Teknologi sensor pintar untuk pemantauan kualitas air kolam dan tambak secara real-time via smartphone.</p>
+          <a href="#kontak" class="cs-link">Info Lebih <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="card-service">
+          <div class="cs-icon" style="background:linear-gradient(135deg,#e3f2fd,#bbdefb);">🎓</div>
+          <h3>Pelatihan Nelayan</h3>
+          <p>Program pelatihan dan edukasi modern bagi nelayan dan pembudidaya untuk meningkatkan kapasitas produksi.</p>
+          <a href="#kontak" class="cs-link">Daftar Pelatihan <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUK UNGGULAN -->
+  <section class="section products-bg" id="produk">
+    <div class="container">
+      <div class="sec-title">
+        <span class="sec-badge">Pilihan Terbaik</span>
+        <h2>Produk Unggulan <span class="accent-line"></span></h2>
+        <p>Hasil laut dan tambak pilihan dengan standar kualitas premium</p>
+      </div>
+      <div class="grid-4">
+        <div class="card-produk">
+          <div class="cp-img" style="background:linear-gradient(135deg,#caf0f8,#90e0ef);">🐟</div>
+          <div class="cp-body">
+            <span class="cp-tag">Best Seller</span>
+            <h3>Ikan Bandeng Segar</h3>
+            <p>Dari tambak pilihan, bebas formalin, siap masak dan olah</p>
+            <div class="cp-price">Rp 35.000<small>/kg</small></div>
+            <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+          </div>
+        </div>
+        <div class="card-produk">
+          <div class="cp-img" style="background:linear-gradient(135deg,#fff8e1,#ffecb3);">🦐</div>
+          <div class="cp-body">
+            <span class="cp-tag premium">Premium</span>
+            <h3>Udang Vaname</h3>
+            <p>Grade A, ukuran 40/kg, siap konsumsi maupun ekspor</p>
+            <div class="cp-price">Rp 85.000<small>/kg</small></div>
+            <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+          </div>
+        </div>
+        <div class="card-produk">
+          <div class="cp-img" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9);">🐠</div>
+          <div class="cp-body">
+            <span class="cp-tag">Segar</span>
+            <h3>Ikan Nila</h3>
+            <p>Budidaya lokal, daging tebal, bersih tanpa bau lumpur</p>
+            <div class="cp-price">Rp 28.000<small>/kg</small></div>
+            <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+          </div>
+        </div>
+        <div class="card-produk">
+          <div class="cp-img" style="background:linear-gradient(135deg,#ede7f6,#d1c4e9);">🦑</div>
+          <div class="cp-body">
+            <span class="cp-tag frozen">Frozen</span>
+            <h3>Cumi-Cumi Beku</h3>
+            <p>IQF Frozen, tahan 12 bulan, higienis dan siap olah</p>
+            <div class="cp-price">Rp 55.000<small>/kg</small></div>
+            <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUK IKAN KATALOG -->
+  <section class="section services-bg" id="produk-ikan">
+    <div class="container">
+      <div class="sec-title">
+        <span class="sec-badge">Katalog Lengkap</span>
+        <h2>Semua Produk Ikan <span class="accent-line"></span></h2>
+        <p>Berbagai jenis ikan segar dan olahan dari sumber terpercaya</p>
+      </div>
+      <div class="pi-kategori">
+        <span class="pi-kat-badge active" onclick="filterIkan('semua', this)">🐟 Semua</span>
+        <span class="pi-kat-badge" onclick="filterIkan('laut', this)">🌊 Ikan Laut</span>
+        <span class="pi-kat-badge" onclick="filterIkan('tawar', this)">💧 Air Tawar</span>
+        <span class="pi-kat-badge" onclick="filterIkan('olahan', this)">🍱 Olahan</span>
+      </div>
+      <div class="grid-4" id="produk-ikan-grid">
+        <div class="card-produk pi-item" data-kat="laut">
+          <div class="cp-img" style="background:linear-gradient(135deg,#e3f2fd,#bbdefb);">🐟</div>
+          <div class="cp-body">
+            <span class="cp-tag">Laut</span>
+            <h3>Ikan Tuna Segar</h3>
+            <p>Tangkapan Samudra Hindia, daging merah segar, cocok untuk sashimi &amp; steak</p>
+            <div class="cp-price">Rp 75.000<small>/kg</small></div>
+            <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+          </div>
+        </div>
+        <div class="card-produk pi-item" data-kat="laut">
+          <div class="cp-img" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9);">🐠</div>
+          <div class="cp-body">
+            <span class="cp-tag">Laut</span>
+            <h3>Ikan Kakap Merah</h3>
+            <p>Dari perairan Natuna, segar, daging putih tebal, cocok digoreng &amp; dikukus</p>
+            <div class="cp-price">Rp 65.000<small>/kg</small></div>
+            <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+          </div>
+        </div>
+        <div class="card-produk pi-item" data-kat="laut">
+          <div class="cp-img" style="background:linear-gradient(135deg,#fff3e0,#ffe0b2);">🐡</div>
+          <div class="cp-body">
+            <span class="cp-tag premium">Premium</span>
+            <h3>Ikan Kerapu</h3>
+            <p>Grade ekspor, hidup atau segar, ideal untuk restoran &amp; hotel bintang</p>
+            <div class="cp-price">Rp 120.000<small>/kg</small></div>
+            <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+          </div>
+        </div>
+        <div class="card-produk pi-item" data-kat="laut">
+          <div class="cp-img" style="background:linear-gradient(135deg,#fce4ec,#f8bbd0);">🐟</div>
+          <div class="cp-body">
+            <span class="cp-tag">Laut</span>
+            <h3>Ikan Tenggiri</h3>
+            <p>Segar atau fillet, rendah lemak, cocok untuk bakso ikan dan pempek</p>
+            <div class="cp-price">Rp 55.000<small>/kg</small></div>
+            <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+          </div>
+        </div>
+        <div class="card-produk pi-item" data-kat="tawar">
+          <div class="cp-img" style="background:linear-gradient(135deg,#e8eaf6,#c5cae9);">🐟</div>
+          <div class="cp-body">
+            <span class="cp-tag" style="background:#e8eaf6;color:#3949ab;">Air Tawar</span>
+            <h3>Ikan Lele Jumbo</h3>
+            <p>Ukuran 300–400g/ekor, budidaya bioflok, bersih tanpa bau lumpur</p>
+            <div class="cp-price">Rp 22.000<small>/kg</small></div>
+            <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+          </div>
+        </div>
+        <div class="card-produk pi-item" data-kat="tawar">
+          <div class="cp-img" style="background:linear-gradient(135deg,#f3e5f5,#e1bee7);">🐟</div>
+          <div class="cp-body">
+            <span class="cp-tag" style="background:#e8eaf6;color:#3949ab;">Air Tawar</span>
+            <h3>Ikan Gurame</h3>
+            <p>Segar dari kolam, ukuran 500g–1kg, cocok dibakar dan digoreng crispy</p>
+            <div class="cp-price">Rp 45.000<small>/kg</small></div>
+            <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+          </div>
+        </div>
+        <div class="card-produk pi-item" data-kat="tawar">
+          <div class="cp-img" style="background:linear-gradient(135deg,#e0f7fa,#b2ebf2);">🐟</div>
+          <div class="cp-body">
+            <span class="cp-tag" style="background:#e8eaf6;color:#3949ab;">Air Tawar</span>
+            <h3>Ikan Patin</h3>
+            <p>Fillet siap masak atau utuh, daging putih lembut, cocok untuk sup &amp; pepes</p>
+            <div class="cp-price">Rp 30.000<small>/kg</small></div>
+            <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+          </div>
+        </div>
+        <div class="card-produk pi-item" data-kat="olahan">
+          <div class="cp-img" style="background:linear-gradient(135deg,#fff8e1,#ffecb3);">🍱</div>
+          <div class="cp-body">
+            <span class="cp-tag frozen">Olahan</span>
+            <h3>Ikan Asap</h3>
+            <p>Ikan bandeng &amp; tuna asap dingin, vacuum pack, tahan 30 hari, siap saji</p>
+            <div class="cp-price">Rp 48.000<small>/250g</small></div>
+            <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUDIDAYA -->
+  <section class="section budidaya-section" id="budidaya">
+    <div class="container budidaya-grid">
+      <div class="budidaya-text">
+        <span class="sec-badge light">Teknologi Modern</span>
+        <h2>Sistem Budidaya Cerdas &amp; Berkelanjutan</h2>
+        <p>Kami menerapkan teknologi bioflok, RAS (Recirculating Aquaculture System), dan monitoring IoT untuk menghasilkan produk dengan efisiensi tinggi dan dampak lingkungan minimal.</p>
+        <ul class="budidaya-list">
+          <li>Sistem Bioflok hemat air hingga 90%</li>
+          <li>Monitoring suhu &amp; pH otomatis 24/7</li>
+          <li>Pakan efisien dengan FCR rendah</li>
+          <li>Bebas antibiotik, ramah lingkungan</li>
+          <li>Sertifikasi SNI dan CBIB</li>
+        </ul>
+        <a href="#kontak" class="btn-primary" style="margin-top:0.5rem;"><i class="fas fa-comments"></i> Konsultasi Budidaya</a>
+      </div>
+      <div class="budidaya-cards">
+        <div class="bc-item">
+          <span class="bc-icon">🌡️</span>
+          <strong>Suhu Optimal</strong>
+          <p>28–32°C terjaga otomatis</p>
+        </div>
+        <div class="bc-item">
+          <span class="bc-icon">💧</span>
+          <strong>Kualitas Air</strong>
+          <p>pH 7.5–8.5, DO &gt; 5 mg/L</p>
+        </div>
+        <div class="bc-item">
+          <span class="bc-icon">📈</span>
+          <strong>Produktivitas</strong>
+          <p>Naik hingga 3x lipat</p>
+        </div>
+        <div class="bc-item">
+          <span class="bc-icon">🏆</span>
+          <strong>Bersertifikat</strong>
+          <p>SNI &amp; CBIB Certified</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONI -->
+  <section class="section testi-bg" id="testimoni">
+    <div class="container">
+      <div class="sec-title">
+        <span class="sec-badge">Kata Mereka</span>
+        <h2>Testimoni Pelanggan <span class="accent-line"></span></h2>
+        <p>Kepercayaan pelanggan adalah prioritas utama kami</p>
+      </div>
+      <div class="grid-3">
+        <div class="card-testi">
+          <div class="ct-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>"Ikan bandeng dari Tirtatama selalu segar dan pengiriman cepat. Sudah langganan 2 tahun dan tidak pernah mengecewakan!"</p>
+          <div class="ct-author">
+            <div class="ct-avatar">BS</div>
+            <div><strong>Budi Santoso</strong><span>Restoran Seafood, Malang</span></div>
+          </div>
+        </div>
+        <div class="card-testi">
+          <div class="ct-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>"Konsultasi budidaya udang sangat membantu. Produksi tambak saya naik 200% dalam 6 bulan berkat pendampingan tim Tirtatama."</p>
+          <div class="ct-author">
+            <div class="ct-avatar">SR</div>
+            <div><strong>Siti Rahayu</strong><span>Pembudidaya Udang, Sidoarjo</span></div>
+          </div>
+        </div>
+        <div class="card-testi">
+          <div class="ct-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>"Sistem IoT monitoring tambak benar-benar memudahkan pengelolaan dan menghemat biaya operasional secara signifikan."</p>
+          <div class="ct-author">
+            <div class="ct-avatar">AG</div>
+            <div><strong>Ahmad Gunawan</strong><span>Petambak, Pasuruan</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAK -->
+  <section class="section kontak-bg" id="kontak">
+    <div class="container">
+      <div class="sec-title">
+        <span class="sec-badge">Hubungi Kami</span>
+        <h2>Siap Membantu Anda <span class="accent-line"></span></h2>
+        <p>Konsultasi gratis untuk kebutuhan perikanan dan budidaya Anda</p>
+      </div>
+      <div class="kontak-grid">
+        <div class="kontak-info">
+          <div class="ki-item">
+            <div class="ki-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div><strong>Alamat</strong><p>Malang, Jawa Timur, Indonesia</p></div>
+          </div>
+          <div class="ki-item">
+            <div class="ki-icon"><i class="fas fa-phone-alt"></i></div>
+            <div><strong>Telepon</strong><p>+62 812-XXXX-XXXX</p></div>
+          </div>
+          <div class="ki-item">
+            <div class="ki-icon"><i class="fas fa-envelope"></i></div>
+            <div><strong>Email</strong><p>info@tirtatama.id</p></div>
+          </div>
+          <div class="ki-item">
+            <div class="ki-icon" style="background:linear-gradient(135deg,#d4f8d4,#a5e5a5);color:#128c7e;"><i class="fab fa-whatsapp"></i></div>
+            <div><strong>WhatsApp</strong><p>Chat langsung dengan tim kami</p></div>
+          </div>
+          <div class="jam-operasional">
+            <h4><i class="fas fa-clock"></i> Jam Operasional</h4>
+            <p>Senin – Jumat: 08.00 – 17.00 WIB</p>
+            <p>Sabtu: 08.00 – 13.00 WIB</p>
+          </div>
+        </div>
+        <form class="kontak-form" id="kontak-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nama">Nama Lengkap</label>
+              <input type="text" id="nama" placeholder="Nama Anda" required/>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="email@anda.com" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="layanan">Layanan yang Diminati</label>
+            <select id="layanan">
+              <option value="">Pilih layanan...</option>
+              <option>Pembelian Ikan Segar</option>
+              <option>Konsultasi Akuakultur</option>
+              <option>Solusi Budidaya</option>
+              <option>Distribusi &amp; Ekspor</option>
+              <option>Monitoring IoT</option>
+              <option>Pelatihan Nelayan</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="pesan">Pesan</label>
+            <textarea id="pesan" rows="4" placeholder="Ceritakan kebutuhan Anda..."></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-submit">
+              <i class="fas fa-paper-plane"></i> Kirim Pesan
+            </button>
+            <a href="https://wa.me/62812XXXXXXXX?text=Halo%20Tirtatama%2C%20saya%20ingin%20konsultasi" target="_blank" rel="noopener" class="btn-wa">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#beranda" class="logo">
+          <div class="logo-icon">🐟</div>
+          Tirta<span>tama</span>
+        </a>
+        <p>Solusi perikanan terbaik dan terpercaya untuk Indonesia yang lebih sejahtera dan mandiri pangan.</p>
+        <div class="footer-sosmed">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Layanan</h4>
+        <ul>
+          <li><a href="#layanan"><i class="fas fa-fish"></i> Penjualan Ikan</a></li>
+          <li><a href="#layanan"><i class="fas fa-flask"></i> Konsultasi</a></li>
+          <li><a href="#budidaya"><i class="fas fa-seedling"></i> Budidaya</a></li>
+          <li><a href="#layanan"><i class="fas fa-truck"></i> Distribusi</a></li>
+          <li><a href="#layanan"><i class="fas fa-wifi"></i> IoT Monitoring</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Produk</h4>
+        <ul>
+          <li><a href="#produk">Ikan Bandeng</a></li>
+          <li><a href="#produk">Udang Vaname</a></li>
+          <li><a href="#produk">Ikan Nila</a></li>
+          <li><a href="#produk">Cumi-Cumi</a></li>
+          <li><a href="#produk-ikan">Katalog Lengkap</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Perusahaan</h4>
+        <ul>
+          <li><a href="#beranda">Tentang Kami</a></li>
+          <li><a href="#testimoni">Testimoni</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Karir</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 <a href="#beranda">Tirtatama.id</a> — All rights reserved. Dibuat dengan ❤️ untuk nelayan Indonesia.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
