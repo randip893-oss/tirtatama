@@ -50,8 +50,22 @@ function showToast(msg) {
 
 function handleSubmit(e) {
   e.preventDefault();
-  showToast('✅ Pesan berhasil dikirim! Kami akan menghubungi Anda segera.');
-  e.target.reset();
+
+  const nama = document.getElementById('nama').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const layanan = document.getElementById('layanan').value.trim();
+  const pesan = document.getElementById('pesan').value.trim();
+
+  const text = `Halo Tirtatama,%0A
+Nama: ${nama}%0A
+Email: ${email}%0A
+Layanan: ${layanan || '-'}%0A
+Pesan: ${pesan || '-'}`;
+
+  const nomorWA = '6287881482307';
+  const url = `https://wa.me/${nomorWA}?text=${encodeURIComponent(`Halo Tirtatama,\nNama: ${nama}\nEmail: ${email}\nLayanan: ${layanan || '-'}\nPesan: ${pesan || '-'}`)}`;
+
+  window.open(url, '_blank');
 }
 
 (function createParticles() {
