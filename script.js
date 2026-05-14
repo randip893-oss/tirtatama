@@ -50,26 +50,31 @@ function showToast(msg) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  console.log("handleSubmit DIPANGGIL!"); // Test di console
+  console.log("handleSubmit DIPANGGIL!"); 
   
-  const nama = document.getElementById('nama').value;
-  const email = document.getElementById('email').value;
-  const layanan = document.getElementById('layanan').value;
-  const pesan = document.getElementById('pesan').value;
-  
-  console.log("Data:", {nama, email, layanan, pesan}); // Lihat data
-  
-  const nomorWA = '6287881482307'; // GANTI NOMOR INI!
-  const text = `Nama: ${nama}\nEmail: ${email}\nLayanan: ${layanan}\nPesan: ${pesan}`;
-  const waLink = `https://wa.me/${nomorWA}?text=${encodeURIComponent(text)}`;
-  
-  console.log("WA Link:", waLink); // Test link
-  window.open(waLink, '_blank');
-}
+  const nama = document.getElementById('nama').value || 'Tidak diisi';
+  const email = document.getElementById('email').value || 'Tidak diisi';
+  const layanan = document.getElementById('layanan').value || 'Tidak dipilih';
+  const pesan = document.getElementById('pesan').value || 'Tidak ada pesan';
 
-function showToast(msg) {
+  console.log("Data:", {nama, email, layanan, pesan});
+  
+  const nomorWA = '6287881482307'; // GANTI NOMOR INI DENGAN NOMOR KAMU!
+  
+  const textWA = `🌊 *Konsultasi Tirtatama*\n\n` +
+                 `👤 Nama: ${nama}\n` +
+                 `📧 Email: ${email}\n` +
+                 `🎯 Layanan: ${layanan}\n` +
+                 `💬 Pesan: ${pesan}`;
+
+  const waLink = `https://wa.me/${nomorWA}?text=${encodeURIComponent(textWA)}`;
+  console.log("WA Link:", waLink);
+  
+  window.open(waLink, '_blank');
+  
+  // Toast
   const toast = document.getElementById('toast');
-  toast.textContent = msg;
+  toast.textContent = '✅ WhatsApp terbuka dengan data!';
   toast.classList.add('show');
   setTimeout(()=>toast.classList.remove('show'), 3000);
 }
