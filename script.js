@@ -48,24 +48,31 @@ function showToast(msg) {
   }, 3500);
 }
 
-function handleSubmit(e) {
-  e.preventDefault();
+function handleSubmit(event) {
+  event.preventDefault(); // Cegah refresh halaman
 
-  const nama = document.getElementById('nama').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const layanan = document.getElementById('layanan').value.trim();
-  const pesan = document.getElementById('pesan').value.trim();
+  // Ambil data form
+  const nama = document.getElementById('nama').value;
+  const email = document.getElementById('email').value;
+  const layanan = document.getElementById('layanan').value;
+  const pesan = document.getElementById('pesan').value;
 
-  const text = `Halo Tirtatama,%0A
-Nama: ${nama}%0A
-Email: ${email}%0A
-Layanan: ${layanan || '-'}%0A
-Pesan: ${pesan || '-'}`;
-
+  // Nomor WA kamu (ganti dengan nomor asli)
   const nomorWA = '6287881482307';
-  const url = `https://wa.me/${nomorWA}?text=${encodeURIComponent(`Halo Tirtatama,\nNama: ${nama}\nEmail: ${email}\nLayanan: ${layanan || '-'}\nPesan: ${pesan || '-'}`)}`;
 
-  window.open(url, '_blank');
+  // Rangkai pesan
+  const textWA = `Halo Tirtatama, saya ingin konsultasi.%0A%0A` +
+                 `Nama: ${nama}%0A` +
+                 `Email: ${email}%0A` +
+                 `Layanan: ${layanan}%0A` +
+                 `Pesan: ${pesan}`;
+
+  // Buka WhatsApp
+  const waLink = `https://wa.me/${nomorWA}?text=${encodeURIComponent(textWA)}`;
+  window.open(waLink, '_blank');
+
+  // Toast sukses (opsional)
+  showToast('Pesan siap dikirim di WhatsApp!');
 }
 
 (function createParticles() {
