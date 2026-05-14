@@ -79,14 +79,6 @@ function handleSubmit(event) {
   setTimeout(()=>toast.classList.remove('show'), 3000);
 }
 
-// Fungsi toast (tambahkan juga)
-function showToast(message) {
-  const toast = document.getElementById('toast');
-  toast.textContent = message;
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 3000);
-}
-
 (function createParticles() {
   const container = document.getElementById('particles');
   if (!container) return;
