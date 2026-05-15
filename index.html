@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tirtatama — Solusi Perikanan &amp; Akuakultur Indonesia</title>
-  <meta name="description" content="Tirtatama menyediakan ikan segar berkualitas premium, layanan konsultasi akuakultur profesional, dan solusi budidaya modern."/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link rel="stylesheet" href="css/style.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tirtatama — Solusi Perikanan & Akuakultur Indonesia</title>
+  <meta name="description" content="Tirtatama menyediakan ikan segar berkualitas premium, pakan koi, media filter, obat ikan, dan perlengkapan akuakultur lengkap." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="container nav-inner">
-      <a href="#beranda" class="logo">
+      <a href="#beranda" class="logo" aria-label="Tirtatama Beranda">
         <div class="logo-icon">🐟</div>
         Tirta<span>tama</span>
       </a>
+
       <ul class="nav-links">
         <li><a href="#beranda">Beranda</a></li>
         <li><a href="#layanan">Layanan</a></li>
-        <li><a href="#produk">Produk</a></li>
-        <li><a href="#budidaya">Budidaya</a></li>
+        <li><a href="#produk-unggulan">Produk Unggulan</a></li>
+        <li><a href="#katalog">Katalog</a></li>
         <li><a href="#testimoni">Testimoni</a></li>
         <li><a href="#kontak">Kontak</a></li>
       </ul>
+
       <a href="#kontak" class="btn-cta">Konsultasi Gratis</a>
+
       <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
-    </div>
-    <div class="nav-mobile" id="nav-mobile">
-      <a href="#beranda">Beranda</a>
-      <a href="#layanan">Layanan</a>
-      <a href="#produk">Produk</a>
-      <a href="#budidaya">Budidaya</a>
-      <a href="#testimoni">Testimoni</a>
-      <a href="#kontak">Kontak</a>
-      <a href="#kontak" class="btn-cta">Konsultasi Gratis</a>
+
+      <div class="nav-mobile" id="nav-mobile">
+        <a href="#beranda">Beranda</a>
+        <a href="#layanan">Layanan</a>
+        <a href="#produk-unggulan">Produk Unggulan</a>
+        <a href="#katalog">Katalog</a>
+        <a href="#testimoni">Testimoni</a>
+        <a href="#kontak">Kontak</a>
+        <a href="#kontak" class="btn-cta">Konsultasi Gratis</a>
+      </div>
     </div>
   </nav>
 
-  <!-- HERO -->
   <section class="hero" id="beranda">
     <div class="hero-orb hero-orb-1"></div>
     <div class="hero-orb hero-orb-2"></div>
@@ -51,30 +53,25 @@
 
     <div class="container hero-content">
       <div class="hero-badge">Solusi Perikanan No.1 Indonesia</div>
-      <h1>Segar dari Laut,<br/><span class="highlight">Langsung ke Meja Anda</span></h1>
-      <p>Menyediakan ikan segar berkualitas premium, layanan konsultasi akuakultur profesional, dan solusi budidaya modern yang berkelanjutan untuk Indonesia.</p>
+      <h1>Segar dari Kolam,<br><span class="highlight">Langsung ke Meja Anda</span></h1>
+      <p>Menyediakan ikan segar berkualitas premium, pakan koi, media filter, obat ikan, dan perlengkapan akuakultur lengkap untuk kebutuhan budidaya Anda.</p>
+
       <div class="hero-btns">
-        <a href="#produk" class="btn-primary"><i class="fas fa-shopping-cart"></i> Lihat Produk</a>
-        <a href="#layanan" class="btn-ghost"><i class="fas fa-list-alt"></i> Layanan Kami</a>
+        <a href="#produk-unggulan" class="btn-primary"><i class="fas fa-star"></i> Produk Unggulan</a>
+        <a href="#katalog" class="btn-ghost"><i class="fas fa-th"></i> Lihat Katalog</a>
       </div>
+
       <div class="hero-stats">
-        <div class="hstat"><strong>500+</strong><span>Produk Ikan</span></div>
+        <div class="hstat"><strong>50+</strong><span>Produk Lengkap</span></div>
         <div class="hstat-divider"></div>
         <div class="hstat"><strong>1.200+</strong><span>Pelanggan</span></div>
         <div class="hstat-divider"></div>
-        <div class="hstat"><strong>50+</strong><span>Mitra Nelayan</span></div>
+        <div class="hstat"><strong>100%</strong><span>Terpercaya</span></div>
       </div>
     </div>
 
-    <!-- Animated Wave -->
     <div class="wave-container">
-      <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="120">
-        <defs>
-          <linearGradient id="waveGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" style="stop-color:#f0f9ff;stop-opacity:1"/>
-            <stop offset="100%" style="stop-color:#f0f9ff;stop-opacity:1"/>
-          </linearGradient>
-        </defs>
+      <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="80">
         <g class="wave-animate">
           <path d="M0,60 C120,100 240,20 360,60 C480,100 600,20 720,60 C840,100 960,20 1080,60 C1200,100 1320,20 1440,60 L1440,120 L0,120 Z" fill="#f0f9ff" opacity="0.9"/>
           <path d="M1440,60 C1320,100 1200,20 1080,60 C960,100 840,20 720,60 C600,100 480,20 360,60 C240,100 120,20 0,60 L0,120 L1440,120 Z" fill="#f0f9ff" opacity="0.9"/>
@@ -87,7 +84,6 @@
     </div>
   </section>
 
-  <!-- LAYANAN -->
   <section class="section services-bg" id="layanan">
     <div class="container">
       <div class="sec-title">
@@ -95,242 +91,346 @@
         <h2>Layanan Unggulan <span class="accent-line"></span></h2>
         <p>Solusi lengkap dari hulu ke hilir bisnis perikanan dan akuakultur Anda</p>
       </div>
+
       <div class="grid-3">
         <div class="card-service">
           <div class="cs-icon" style="background:linear-gradient(135deg,#e0f7fa,#b2ebf2);">🐟</div>
           <h3>Penjualan Ikan Segar</h3>
-          <p>Ikan segar langsung dari nelayan dan tambak terpercaya, bebas formalin dan bahan pengawet berbahaya.</p>
-          <a href="#produk" class="cs-link">Lihat Produk <i class="fas fa-arrow-right"></i></a>
+          <p>Ikan lele jumbo dan koi premium berkualitas tinggi dari budidaya terpercaya.</p>
+          <a href="#produk-unggulan" class="cs-link">Lihat Produk <i class="fas fa-arrow-right"></i></a>
         </div>
+
         <div class="card-service featured">
           <div class="cs-badge-top">Terpopuler</div>
-          <div class="cs-icon" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9);">🔬</div>
+          <div class="cs-icon" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9);">🛒</div>
+          <h3>Pakan & Perlengkapan Koi</h3>
+          <p>Pakan Hokky, media filter, obat ikan, dan semua kebutuhan kolam koi Anda.</p>
+          <a href="#katalog" class="cs-link">Lihat Katalog <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="card-service">
+          <div class="cs-icon" style="background:linear-gradient(135deg,#fff8e1,#ffecb3);">🔬</div>
           <h3>Konsultasi Akuakultur</h3>
-          <p>Pendampingan teknis dari ahli berpengalaman untuk optimasi tambak, pengendalian penyakit, dan peningkatan produksi.</p>
-          <a href="#kontak" class="cs-link">Konsultasi Sekarang <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="card-service">
-          <div class="cs-icon" style="background:linear-gradient(135deg,#fff8e1,#ffecb3);">🌱</div>
-          <h3>Solusi Budidaya</h3>
-          <p>Sistem budidaya intensif dan semi-intensif untuk udang, ikan bandeng, nila, lele, dan berbagai komoditas unggulan.</p>
-          <a href="#budidaya" class="cs-link">Pelajari Lebih <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="card-service">
-          <div class="cs-icon" style="background:linear-gradient(135deg,#fce4ec,#f8bbd0);">📦</div>
-          <h3>Distribusi &amp; Ekspor</h3>
-          <p>Jaringan distribusi ke pasar lokal dan ekspor dengan sistem rantai dingin terjaga dan kemasan higienis.</p>
-          <a href="#kontak" class="cs-link">Kerjasama <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="card-service">
-          <div class="cs-icon" style="background:linear-gradient(135deg,#ede7f6,#d1c4e9);">📡</div>
-          <h3>Monitoring IoT</h3>
-          <p>Teknologi sensor pintar untuk pemantauan kualitas air kolam dan tambak secara real-time via smartphone.</p>
-          <a href="#kontak" class="cs-link">Info Lebih <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="card-service">
-          <div class="cs-icon" style="background:linear-gradient(135deg,#e3f2fd,#bbdefb);">🎓</div>
-          <h3>Pelatihan Nelayan</h3>
-          <p>Program pelatihan dan edukasi modern bagi nelayan dan pembudidaya untuk meningkatkan kapasitas produksi.</p>
-          <a href="#kontak" class="cs-link">Daftar Pelatihan <i class="fas fa-arrow-right"></i></a>
+          <p>Pendampingan teknis dari ahli untuk optimasi budidaya dan pengendalian penyakit.</p>
+          <a href="#kontak" class="cs-link">Konsultasi <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PRODUK UNGGULAN -->
-  <section class="section products-bg" id="produk">
+  <section class="section produk-unggulan-section" id="produk-unggulan">
     <div class="container">
       <div class="sec-title">
-        <span class="sec-badge">Pilihan Terbaik</span>
+        <span class="sec-badge">Best Seller</span>
         <h2>Produk Unggulan <span class="accent-line"></span></h2>
-        <p>Hasil laut dan tambak pilihan dengan standar kualitas premium</p>
+        <p>Pilihan terbaik dari kolam kami untuk kebutuhan budidaya Anda</p>
       </div>
-      <div class="grid-4">
-        <div class="card-produk">
-          <div class="cp-img" style="background:linear-gradient(135deg,#caf0f8,#90e0ef);">🐟</div>
-          <div class="cp-body">
-            <span class="cp-tag">Best Seller</span>
-            <h3>Ikan Bandeng Segar</h3>
-            <p>Dari tambak pilihan, bebas formalin, siap masak dan olah</p>
-            <div class="cp-price">Rp 35.000<small>/kg</small></div>
-            <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+
+      <div class="produk-unggulan-grid">
+        <div class="card-unggulan">
+          <div class="cu-header">
+            <div class="cu-img">
+              <img src="assets/img/lele.jpg" alt="Ikan Lele Jumbo Segar Budidaya Bioflok" loading="lazy" />
+              <div class="cu-badge bestseller"><i class="fas fa-fire"></i> Best Seller</div>
+            </div>
+          </div>
+          <div class="cu-body">
+            <div class="cu-tags">
+              <span class="tag-green"><i class="fas fa-leaf"></i> Bioflok</span>
+              <span class="tag-blue"><i class="fas fa-certificate"></i> SNI</span>
+            </div>
+            <h3>Ikan Lele Jumbo</h3>
+            <p class="cu-desc">Lele jumbo ukuran 300–500g/ekor dari budidaya bioflok modern. Bersih tanpa bau lumpur, daging tebal, gurih, dan siap masak. Cocok untuk pecel lele, lele goreng crispy, atau olahan restoran premium.</p>
+            <div class="cu-features">
+              <div class="feature-item"><i class="fas fa-check-circle"></i><span>Budidaya Bioflok Ramah Lingkungan</span></div>
+              <div class="feature-item"><i class="fas fa-check-circle"></i><span>Bebas Bau Lumpur & Antibiotik</span></div>
+              <div class="feature-item"><i class="fas fa-check-circle"></i><span>Daging Tebal & Gurih</span></div>
+              <div class="feature-item"><i class="fas fa-check-circle"></i><span>Sertifikat SNI & Higienis</span></div>
+            </div>
+            <div class="cu-specs">
+              <div class="spec-item">
+                <i class="fas fa-weight"></i>
+                <div><strong>Ukuran</strong><span>300-500g/ekor</span></div>
+              </div>
+              <div class="spec-item">
+                <i class="fas fa-box"></i>
+                <div><strong>Minimum Order</strong><span>5 kg</span></div>
+              </div>
+            </div>
+            <div class="cu-price-section">
+              <div class="price-wrapper">
+                <div class="price-old">Rp 28.000</div>
+                <div class="price-main">
+                  <span class="price-amount">Rp 22.000</span>
+                  <span class="price-unit">/kg</span>
+                </div>
+                <div class="price-save">Hemat 21%</div>
+              </div>
+            </div>
+            <div class="cu-actions">
+              <a href="https://wa.me/6287881482307?text=Halo,%20saya%20ingin%20pesan%20Ikan%20Lele%20Jumbo" target="_blank" rel="noopener" class="btn-pesan"><i class="fab fa-whatsapp"></i> Pesan via WhatsApp</a>
+              <button class="btn-info" type="button" onclick="showDetail('lele')"><i class="fas fa-info-circle"></i> Detail</button>
+            </div>
           </div>
         </div>
-        <div class="card-produk">
-          <div class="cp-img" style="background:linear-gradient(135deg,#fff8e1,#ffecb3);">🦐</div>
-          <div class="cp-body">
-            <span class="cp-tag premium">Premium</span>
-            <h3>Udang Vaname</h3>
-            <p>Grade A, ukuran 40/kg, siap konsumsi maupun ekspor</p>
-            <div class="cp-price">Rp 85.000<small>/kg</small></div>
-            <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+
+        <div class="card-unggulan">
+          <div class="cu-header">
+            <div class="cu-img">
+              <img src="assets/img/koi.jpg" alt="Ikan Koi Import Quality Premium" loading="lazy" />
+              <div class="cu-badge premium"><i class="fas fa-gem"></i> Premium</div>
+            </div>
           </div>
-        </div>
-        <div class="card-produk">
-          <div class="cp-img" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9);">🐠</div>
-          <div class="cp-body">
-            <span class="cp-tag">Segar</span>
-            <h3>Ikan Nila</h3>
-            <p>Budidaya lokal, daging tebal, bersih tanpa bau lumpur</p>
-            <div class="cp-price">Rp 28.000<small>/kg</small></div>
-            <a href="#kontak" class="btn-order">Pesan Sekarang</a>
-          </div>
-        </div>
-        <div class="card-produk">
-          <div class="cp-img" style="background:linear-gradient(135deg,#ede7f6,#d1c4e9);">🦑</div>
-          <div class="cp-body">
-            <span class="cp-tag frozen">Frozen</span>
-            <h3>Cumi-Cumi Beku</h3>
-            <p>IQF Frozen, tahan 12 bulan, higienis dan siap olah</p>
-            <div class="cp-price">Rp 55.000<small>/kg</small></div>
-            <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+          <div class="cu-body">
+            <div class="cu-tags">
+              <span class="tag-gold"><i class="fas fa-star"></i> Import Quality</span>
+              <span class="tag-purple"><i class="fas fa-palette"></i> Multi Varian</span>
+            </div>
+            <h3>Ikan Koi Premium</h3>
+            <p class="cu-desc">Ikan koi import quality dengan corak warna cemerlang dan body proporsional sempurna. Tersedia berbagai jenis: Kohaku, Sanke, Showa, Platinum Ogon. Ideal untuk kolam hias, investasi jangka panjang, dan hadiah eksklusif.</p>
+            <div class="cu-features">
+              <div class="feature-item"><i class="fas fa-star"></i><span>Import Quality Grade A</span></div>
+              <div class="feature-item"><i class="fas fa-star"></i><span>Corak Cemerlang & Body Proporsional</span></div>
+              <div class="feature-item"><i class="fas fa-star"></i><span>Sehat, Aktif, Bebas Penyakit</span></div>
+              <div class="feature-item"><i class="fas fa-star"></i><span>Garansi Kualitas 7 Hari</span></div>
+            </div>
+            <div class="cu-specs">
+              <div class="spec-item">
+                <i class="fas fa-ruler"></i>
+                <div><strong>Ukuran</strong><span>15-40 cm</span></div>
+              </div>
+              <div class="spec-item">
+                <i class="fas fa-fish"></i>
+                <div><strong>Jenis</strong><span>Kohaku, Sanke, Showa, dll</span></div>
+              </div>
+            </div>
+            <div class="cu-price-section premium">
+              <div class="price-wrapper">
+                <div class="price-main">
+                  <span class="price-range">Rp 150.000 - Rp 5.000.000</span>
+                  <span class="price-unit">/ekor</span>
+                </div>
+                <div class="price-note">*Harga sesuai ukuran & grade koi</div>
+              </div>
+            </div>
+            <div class="cu-actions">
+              <a href="https://wa.me/6287881482307?text=Halo,%20saya%20ingin%20melihat%20koleksi%20Ikan%20Koi%20Premium" target="_blank" rel="noopener" class="btn-pesan premium"><i class="fab fa-whatsapp"></i> Lihat Koleksi</a>
+              <button class="btn-info" type="button" onclick="showDetail('koi')"><i class="fas fa-info-circle"></i> Detail</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PRODUK IKAN KATALOG -->
-  <section class="section services-bg" id="produk-ikan">
+  <section class="section katalog-section" id="katalog">
     <div class="container">
       <div class="sec-title">
-        <span class="sec-badge">Katalog Lengkap</span>
-        <h2>Semua Produk Ikan <span class="accent-line"></span></h2>
-        <p>Berbagai jenis ikan segar dan olahan dari sumber terpercaya</p>
+        <span class="sec-badge">Lengkap & Terpercaya</span>
+        <h2>Katalog Produk <span class="accent-line"></span></h2>
+        <p>Semua kebutuhan pakan koi, media filter, obat ikan, dan perlengkapan akuakultur</p>
       </div>
-      <div class="pi-kategori">
-        <span class="pi-kat-badge active" onclick="filterIkan('semua', this)">🐟 Semua</span>
-        <span class="pi-kat-badge" onclick="filterIkan('laut', this)">🌊 Ikan Laut</span>
-        <span class="pi-kat-badge" onclick="filterIkan('tawar', this)">💧 Air Tawar</span>
-        <span class="pi-kat-badge" onclick="filterIkan('olahan', this)">🍱 Olahan</span>
+
+      <div class="katalog-filter">
+        <button class="filter-btn active" onclick="filterKatalog('all')"><i class="fas fa-th"></i> Semua Produk</button>
+        <button class="filter-btn" onclick="filterKatalog('pakan')"><i class="fas fa-utensils"></i> Pakan Koi</button>
+        <button class="filter-btn" onclick="filterKatalog('filter')"><i class="fas fa-filter"></i> Media Filter</button>
+        <button class="filter-btn" onclick="filterKatalog('obat')"><i class="fas fa-medkit"></i> Obat Ikan</button>
+        <button class="filter-btn" onclick="filterKatalog('aksesoris')"><i class="fas fa-tools"></i> Aksesoris</button>
       </div>
-      <div class="grid-4" id="produk-ikan-grid">
-        <div class="card-produk pi-item" data-kat="laut">
-          <div class="cp-img" style="background:linear-gradient(135deg,#e3f2fd,#bbdefb);">🐟</div>
-          <div class="cp-body">
-            <span class="cp-tag">Laut</span>
-            <h3>Ikan Tuna Segar</h3>
-            <p>Tangkapan Samudra Hindia, daging merah segar, cocok untuk sashimi &amp; steak</p>
-            <div class="cp-price">Rp 75.000<small>/kg</small></div>
-            <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+
+      <div class="katalog-grid" id="katalog-grid">
+        <div class="card-katalog" data-kategori="pakan">
+          <div class="ck-img">
+            <img src="assets/img/hokky-wheat-germ.jpg" alt="Pakan Koi Hokky Wheat Germ" loading="lazy" />
+            <div class="ck-badge new">New</div>
+          </div>
+          <div class="ck-body">
+            <div class="ck-kategori">Pakan Koi</div>
+            <h4>Pakan Koi Hokky Wheat Germ</h4>
+            <p>Pakan Koi Hokky Wheat Germ (SIZE S, M, L) cocok untuk musim dingin dan meningkatkan daya tahan tubuh koi.</p>
+            <div class="ck-price">Rp 52.500</div>
+            <a href="https://wa.me/6287881482307?text=Halo,%20saya%20ingin%20pesan%20Pakan%20Hokky%20Wheat%20Germ" target="_blank" rel="noopener" class="btn-katalog"><i class="fas fa-cart-plus"></i> Pesan</a>
           </div>
         </div>
-        <div class="card-produk pi-item" data-kat="laut">
-          <div class="cp-img" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9);">🐠</div>
-          <div class="cp-body">
-            <span class="cp-tag">Laut</span>
-            <h3>Ikan Kakap Merah</h3>
-            <p>Dari perairan Natuna, segar, daging putih tebal, cocok digoreng &amp; dikukus</p>
-            <div class="cp-price">Rp 65.000<small>/kg</small></div>
-            <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+
+        <div class="card-katalog" data-kategori="pakan">
+          <div class="ck-img">
+            <img src="assets/img/hokky-colour.jpg" alt="Pakan Koi Hokky Colour Enhancer" loading="lazy" />
+            <div class="ck-badge popular">Popular</div>
+          </div>
+          <div class="ck-body">
+            <div class="ck-kategori">Pakan Koi</div>
+            <h4>Pakan Koi Hokky Colour Enhancer</h4>
+            <p>Pakan Koi Hokky Colour Enhancer (SIZE S, M, L) untuk mencerahkan warna koi Anda secara maksimal.</p>
+            <div class="ck-price">Rp 57.500</div>
+            <a href="https://wa.me/6287881482307?text=Halo,%20saya%20ingin%20pesan%20Pakan%20Hokky%20Colour%20Enhancer" target="_blank" rel="noopener" class="btn-katalog"><i class="fas fa-cart-plus"></i> Pesan</a>
           </div>
         </div>
-        <div class="card-produk pi-item" data-kat="laut">
-          <div class="cp-img" style="background:linear-gradient(135deg,#fff3e0,#ffe0b2);">🐡</div>
-          <div class="cp-body">
-            <span class="cp-tag premium">Premium</span>
-            <h3>Ikan Kerapu</h3>
-            <p>Grade ekspor, hidup atau segar, ideal untuk restoran &amp; hotel bintang</p>
-            <div class="cp-price">Rp 120.000<small>/kg</small></div>
-            <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+
+        <div class="card-katalog" data-kategori="obat">
+          <div class="ck-img">
+            <img src="assets/img/pk-10gram.jpg" alt="PK 10gram Obat Ikan" loading="lazy" />
+          </div>
+          <div class="ck-body">
+            <div class="ck-kategori">Obat Ikan</div>
+            <h4>PK 10gram</h4>
+            <p>Obat ikan dan juga bisa dibuat penyeteril kolam/alat perlengkapan akuarium.</p>
+            <div class="ck-price">Rp 15.000</div>
+            <a href="https://wa.me/6287881482307?text=Halo,%20saya%20ingin%20pesan%20PK%2010gram" target="_blank" rel="noopener" class="btn-katalog"><i class="fas fa-cart-plus"></i> Pesan</a>
           </div>
         </div>
-        <div class="card-produk pi-item" data-kat="laut">
-          <div class="cp-img" style="background:linear-gradient(135deg,#fce4ec,#f8bbd0);">🐟</div>
-          <div class="cp-body">
-            <span class="cp-tag">Laut</span>
-            <h3>Ikan Tenggiri</h3>
-            <p>Segar atau fillet, rendah lemak, cocok untuk bakso ikan dan pempek</p>
-            <div class="cp-price">Rp 55.000<small>/kg</small></div>
-            <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+
+        <div class="card-katalog" data-kategori="obat">
+          <div class="ck-img">
+            <img src="assets/img/obat-kutu.jpg" alt="Obat Kutu Ikan" loading="lazy" />
+          </div>
+          <div class="ck-body">
+            <div class="ck-kategori">Obat Ikan</div>
+            <h4>Obat Kutu</h4>
+            <p>Obat kutu ikan efektif mengatasi parasit eksternal pada ikan hias maupun konsumsi.</p>
+            <div class="ck-price">Rp 50.000</div>
+            <a href="https://wa.me/6287881482307?text=Halo,%20saya%20ingin%20pesan%20Obat%20Kutu" target="_blank" rel="noopener" class="btn-katalog"><i class="fas fa-cart-plus"></i> Pesan</a>
           </div>
         </div>
-        <div class="card-produk pi-item" data-kat="tawar">
-          <div class="cp-img" style="background:linear-gradient(135deg,#e8eaf6,#c5cae9);">🐟</div>
-          <div class="cp-body">
-            <span class="cp-tag" style="background:#e8eaf6;color:#3949ab;">Air Tawar</span>
-            <h3>Ikan Lele Jumbo</h3>
-            <p>Ukuran 300–400g/ekor, budidaya bioflok, bersih tanpa bau lumpur</p>
-            <div class="cp-price">Rp 22.000<small>/kg</small></div>
-            <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+
+        <div class="card-katalog" data-kategori="obat">
+          <div class="ck-img">
+            <img src="assets/img/otc.jpg" alt="OTC Obat Ikan" loading="lazy" />
+          </div>
+          <div class="ck-body">
+            <div class="ck-kategori">Obat Ikan</div>
+            <h4>OTC</h4>
+            <p>Obat ikan multi fungsi untuk berbagai penyakit ikan koi dan ikan hias lainnya.</p>
+            <div class="ck-price">Rp 40.000</div>
+            <a href="https://wa.me/6287881482307?text=Halo,%20saya%20ingin%20pesan%20OTC" target="_blank" rel="noopener" class="btn-katalog"><i class="fas fa-cart-plus"></i> Pesan</a>
           </div>
         </div>
-        <div class="card-produk pi-item" data-kat="tawar">
-          <div class="cp-img" style="background:linear-gradient(135deg,#f3e5f5,#e1bee7);">🐟</div>
-          <div class="cp-body">
-            <span class="cp-tag" style="background:#e8eaf6;color:#3949ab;">Air Tawar</span>
-            <h3>Ikan Gurame</h3>
-            <p>Segar dari kolam, ukuran 500g–1kg, cocok dibakar dan digoreng crispy</p>
-            <div class="cp-price">Rp 45.000<small>/kg</small></div>
-            <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+
+        <div class="card-katalog" data-kategori="obat">
+          <div class="ck-img">
+            <img src="assets/img/acriviafin.jpg" alt="Acriviafin Bubuk" loading="lazy" />
+          </div>
+          <div class="ck-body">
+            <div class="ck-kategori">Obat Ikan</div>
+            <h4>Acriviafin Bubuk</h4>
+            <p>Obat ikan dalam bentuk bubuk, bisa dipakai sampai 11 tahun tanpa habis.</p>
+            <div class="ck-price">Rp 50.000</div>
+            <a href="https://wa.me/6287881482307?text=Halo,%20saya%20ingin%20pesan%20Acriviafin%20Bubuk" target="_blank" rel="noopener" class="btn-katalog"><i class="fas fa-cart-plus"></i> Pesan</a>
           </div>
         </div>
-        <div class="card-produk pi-item" data-kat="tawar">
-          <div class="cp-img" style="background:linear-gradient(135deg,#e0f7fa,#b2ebf2);">🐟</div>
-          <div class="cp-body">
-            <span class="cp-tag" style="background:#e8eaf6;color:#3949ab;">Air Tawar</span>
-            <h3>Ikan Patin</h3>
-            <p>Fillet siap masak atau utuh, daging putih lembut, cocok untuk sup &amp; pepes</p>
-            <div class="cp-price">Rp 30.000<small>/kg</small></div>
-            <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+
+        <div class="card-katalog" data-kategori="aksesoris">
+          <div class="ck-img">
+            <img src="assets/img/garam-ikan.jpg" alt="Garam Ikan" loading="lazy" />
+          </div>
+          <div class="ck-body">
+            <div class="ck-kategori">Aksesoris</div>
+            <h4>Garam Ikan</h4>
+            <p>Garam ikan bisa menetralkan pH serta menjadi obat ikan alami untuk kolam koi.</p>
+            <div class="ck-price">Rp 5.000</div>
+            <a href="https://wa.me/6287881482307?text=Halo,%20saya%20ingin%20pesan%20Garam%20Ikan" target="_blank" rel="noopener" class="btn-katalog"><i class="fas fa-cart-plus"></i> Pesan</a>
           </div>
         </div>
-        <div class="card-produk pi-item" data-kat="olahan">
-          <div class="cp-img" style="background:linear-gradient(135deg,#fff8e1,#ffecb3);">🍱</div>
-          <div class="cp-body">
-            <span class="cp-tag frozen">Olahan</span>
-            <h3>Ikan Asap</h3>
-            <p>Ikan bandeng &amp; tuna asap dingin, vacuum pack, tahan 30 hari, siap saji</p>
-            <div class="cp-price">Rp 48.000<small>/250g</small></div>
-            <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+
+        <div class="card-katalog" data-kategori="filter">
+          <div class="ck-img">
+            <img src="assets/img/karang-jahe.jpg" alt="Karang Jahe kemasan 4kg" loading="lazy" />
+          </div>
+          <div class="ck-body">
+            <div class="ck-kategori">Media Filter</div>
+            <h4>Karang Jahe kemasan 4kg</h4>
+            <p>Media filter kimiawi pada kolam koi untuk menjaga kualitas air tetap jernih.</p>
+            <div class="ck-price">Rp 40.000</div>
+            <a href="https://wa.me/6287881482307?text=Halo,%20saya%20ingin%20pesan%20Karang%20Jahe%204kg" target="_blank" rel="noopener" class="btn-katalog"><i class="fas fa-cart-plus"></i> Pesan</a>
           </div>
         </div>
+
+        <div class="card-katalog" data-kategori="filter">
+          <div class="ck-img">
+            <img src="assets/img/batu-apung.jpg" alt="Media Filter Batu Apung Kemasan +9Kg" loading="lazy" />
+          </div>
+          <div class="ck-body">
+            <div class="ck-kategori">Media Filter</div>
+            <h4>Media Filter Batu Apung +9Kg</h4>
+            <p>Media filter biologi pada kolam koi untuk pertumbuhan bakteri baik yang optimal.</p>
+            <div class="ck-price">Rp 20.000</div>
+            <a href="https://wa.me/6287881482307?text=Halo,%20saya%20ingin%20pesan%20Batu%20Apung%209Kg" target="_blank" rel="noopener" class="btn-katalog"><i class="fas fa-cart-plus"></i> Pesan</a>
+          </div>
+        </div>
+
+        <div class="card-katalog" data-kategori="filter">
+          <div class="ck-img">
+            <img src="assets/img/oyster-4kg.jpg" alt="Oyster/Cangkang Kerang kemasan 4Kg" loading="lazy" />
+          </div>
+          <div class="ck-body">
+            <div class="ck-kategori">Media Filter</div>
+            <h4>Oyster/Cangkang Kerang 4Kg</h4>
+            <p>Media filter kimiawi pada kolam koi, menstabilkan pH air kolam Anda.</p>
+            <div class="ck-price">Rp 30.000</div>
+            <a href="https://wa.me/6287881482307?text=Halo,%20saya%20ingin%20pesan%20Oyster%204Kg" target="_blank" rel="noopener" class="btn-katalog"><i class="fas fa-cart-plus"></i> Pesan</a>
+          </div>
+        </div>
+
+        <div class="card-katalog" data-kategori="filter">
+          <div class="ck-img">
+            <img src="assets/img/oyster-urai.jpg" alt="Oyster/Cangkang kerang Urai" loading="lazy" />
+          </div>
+          <div class="ck-body">
+            <div class="ck-kategori">Media Filter</div>
+            <h4>Oyster/Cangkang kerang Urai</h4>
+            <p>Media filter kimiawi pada kolam koi, pengambilan 20Kg keatas untuk pembelian urai.</p>
+            <div class="ck-price">Rp 8.000<small>/kg</small></div>
+            <a href="https://wa.me/6287881482307?text=Halo,%20saya%20ingin%20pesan%20Oyster%20Urai" target="_blank" rel="noopener" class="btn-katalog"><i class="fas fa-cart-plus"></i> Pesan</a>
+          </div>
+        </div>
+
+        <div class="card-katalog" data-kategori="filter">
+          <div class="ck-img">
+            <img src="assets/img/batu-gombong.jpg" alt="Batu Gombong Jumbo 30Kg++" loading="lazy" />
+          </div>
+          <div class="ck-body">
+            <div class="ck-kategori">Media Filter</div>
+            <h4>Batu Gombong Jumbo 30Kg++</h4>
+            <p>Batu gombong media filter biologi kolam koi, pengambilan minimum 30Kg.</p>
+            <div class="ck-price">Rp 50.000</div>
+            <a href="https://wa.me/6287881482307?text=Halo,%20saya%20ingin%20pesan%20Batu%20Gombong%2030Kg" target="_blank" rel="noopener" class="btn-katalog"><i class="fas fa-cart-plus"></i> Pesan</a>
+          </div>
+        </div>
+
+        <div class="card-katalog" data-kategori="filter">
+          <div class="ck-img">
+            <img src="assets/img/jaring-urai.jpg" alt="Jaring Nelayan Urai" loading="lazy" />
+          </div>
+          <div class="ck-body">
+            <div class="ck-kategori">Media Filter</div>
+            <h4>Jaring Nelayan Urai</h4>
+            <p>Media filter mekanis kolam koi, pengambilan 20Kg keatas untuk pembelian urai.</p>
+            <div class="ck-price">Rp 25.000</div>
+            <a href="https://wa.me/6287881482307?text=Halo,%20saya%20ingin%20pesan%20Jaring%20Nelayan%20Urai" target="_blank" rel="noopener" class="btn-katalog"><i class="fas fa-cart-plus"></i> Pesan</a>
+          </div>
+        </div>
+
+        <div class="card-katalog" data-kategori="filter">
+          <div class="ck-img">
+            <img src="assets/img/jaring-1kg.jpg" alt="Jaring Nelayan Kemasan 1Kg" loading="lazy" />
+          </div>
+          <div class="ck-body">
+            <div class="ck-kategori">Media Filter</div>
+            <h4>Jaring Nelayan Kemasan 1Kg</h4>
+            <p>Media filter mekanis pada kolam koi, kemasan praktis 1Kg siap pakai.</p>
+            <div class="ck-price">Rp 30.000</div>
+            <a href="https://wa.me/6287881482307?text=Halo,%20saya%20ingin%20pesan%20Jaring%20Nelayan%201Kg" target="_blank" rel="noopener" class="btn-katalog"><i class="fas fa-cart-plus"></i> Pesan</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="katalog-loadmore">
+        <button class="btn-loadmore" type="button" onclick="loadMore()"><i class="fas fa-sync-alt"></i> Muat Lebih Banyak</button>
       </div>
     </div>
   </section>
 
-  <!-- BUDIDAYA -->
-  <section class="section budidaya-section" id="budidaya">
-    <div class="container budidaya-grid">
-      <div class="budidaya-text">
-        <span class="sec-badge light">Teknologi Modern</span>
-        <h2>Sistem Budidaya Cerdas &amp; Berkelanjutan</h2>
-        <p>Kami menerapkan teknologi bioflok, RAS (Recirculating Aquaculture System), dan monitoring IoT untuk menghasilkan produk dengan efisiensi tinggi dan dampak lingkungan minimal.</p>
-        <ul class="budidaya-list">
-          <li>Sistem Bioflok hemat air hingga 90%</li>
-          <li>Monitoring suhu &amp; pH otomatis 24/7</li>
-          <li>Pakan efisien dengan FCR rendah</li>
-          <li>Bebas antibiotik, ramah lingkungan</li>
-          <li>Sertifikasi SNI dan CBIB</li>
-        </ul>
-        <a href="#kontak" class="btn-primary" style="margin-top:0.5rem;"><i class="fas fa-comments"></i> Konsultasi Budidaya</a>
-      </div>
-      <div class="budidaya-cards">
-        <div class="bc-item">
-          <span class="bc-icon">🌡️</span>
-          <strong>Suhu Optimal</strong>
-          <p>28–32°C terjaga otomatis</p>
-        </div>
-        <div class="bc-item">
-          <span class="bc-icon">💧</span>
-          <strong>Kualitas Air</strong>
-          <p>pH 7.5–8.5, DO &gt; 5 mg/L</p>
-        </div>
-        <div class="bc-item">
-          <span class="bc-icon">📈</span>
-          <strong>Produktivitas</strong>
-          <p>Naik hingga 3x lipat</p>
-        </div>
-        <div class="bc-item">
-          <span class="bc-icon">🏆</span>
-          <strong>Bersertifikat</strong>
-          <p>SNI &amp; CBIB Certified</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONI -->
   <section class="section testi-bg" id="testimoni">
     <div class="container">
       <div class="sec-title">
@@ -338,42 +438,29 @@
         <h2>Testimoni Pelanggan <span class="accent-line"></span></h2>
         <p>Kepercayaan pelanggan adalah prioritas utama kami</p>
       </div>
+
       <div class="grid-3">
         <div class="card-testi">
-          <div class="ct-stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p>"Ikan bandeng dari Tirtatama selalu segar dan pengiriman cepat. Sudah langganan 2 tahun dan tidak pernah mengecewakan!"</p>
-          <div class="ct-author">
-            <div class="ct-avatar">BS</div>
-            <div><strong>Budi Santoso</strong><span>Restoran Seafood, Malang</span></div>
-          </div>
+          <div class="ct-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"Ikan lele dari Tirtatama benar-benar bersih dan tidak bau lumpur. Pelanggan restoran saya sangat suka!"</p>
+          <div class="ct-author"><div class="ct-avatar">BS</div><div><strong>Budi Santoso</strong><span>Restoran Pecel Lele, Malang</span></div></div>
         </div>
+
         <div class="card-testi">
-          <div class="ct-stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p>"Konsultasi budidaya udang sangat membantu. Produksi tambak saya naik 200% dalam 6 bulan berkat pendampingan tim Tirtatama."</p>
-          <div class="ct-author">
-            <div class="ct-avatar">SR</div>
-            <div><strong>Siti Rahayu</strong><span>Pembudidaya Udang, Sidoarjo</span></div>
-          </div>
+          <div class="ct-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"Koi premium-nya bagus sekali! Corak cemerlang dan sehat. Pakan Hokky juga bikin warna koi makin tajam."</p>
+          <div class="ct-author"><div class="ct-avatar">SR</div><div><strong>Siti Rahayu</strong><span>Kolektor Koi, Surabaya</span></div></div>
         </div>
+
         <div class="card-testi">
-          <div class="ct-stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p>"Sistem IoT monitoring tambak benar-benar memudahkan pengelolaan dan menghemat biaya operasional secara signifikan."</p>
-          <div class="ct-author">
-            <div class="ct-avatar">AG</div>
-            <div><strong>Ahmad Gunawan</strong><span>Petambak, Pasuruan</span></div>
-          </div>
+          <div class="ct-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"Media filter dan obat ikan lengkap semua. Harga terjangkau dan pengiriman cepat. Recommended!"</p>
+          <div class="ct-author"><div class="ct-avatar">AG</div><div><strong>Ahmad Gunawan</strong><span>Pemilik Kolam Koi, Pasuruan</span></div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- KONTAK -->
   <section class="section kontak-bg" id="kontak">
     <div class="container">
       <div class="sec-title">
@@ -381,6 +468,7 @@
         <h2>Siap Membantu Anda <span class="accent-line"></span></h2>
         <p>Konsultasi gratis untuk kebutuhan perikanan dan budidaya Anda</p>
       </div>
+
       <div class="kontak-grid">
         <div class="kontak-info">
           <div class="ki-item">
@@ -389,7 +477,7 @@
           </div>
           <div class="ki-item">
             <div class="ki-icon"><i class="fas fa-phone-alt"></i></div>
-            <div><strong>Telepon</strong><p>+62 812-XXXX-XXXX</p></div>
+            <div><strong>Telepon</strong><p>+62 878-8148-2307</p></div>
           </div>
           <div class="ki-item">
             <div class="ki-icon"><i class="fas fa-envelope"></i></div>
@@ -405,51 +493,51 @@
             <p>Sabtu: 08.00 – 13.00 WIB</p>
           </div>
         </div>
-        <form class="kontak-form" id="kontak-form" onsubmit="handleSed(event)">
+
+        <form class="kontak-form" id="kontak-form" onsubmit="handleSubmit(event)">
           <div class="form-row">
             <div class="form-group">
               <label for="nama">Nama Lengkap</label>
-              <input type="text" id="nama" placeholder="Nama Anda" required/>
+              <input type="text" id="nama" placeholder="Nama Anda" required />
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" placeholder="email@anda.com" required/>
+              <input type="email" id="email" placeholder="email@anda.com" required />
             </div>
           </div>
+
           <div class="form-group">
-            <label for="layanan">Layanan yang Diminati</label>
-            <select id="layanan">
-              <option value="">Pilih layanan...</option>
-              <option>Pembelian Ikan Segar</option>
-              <option>Konsultasi Akuakultur</option>
-              <option>Solusi Budidaya</option>
-              <option>Distribusi &amp; Ekspor</option>
-              <option>Monitoring IoT</option>
-              <option>Pelatihan Nelayan</option>
+            <label for="produk">Produk yang Diminati</label>
+            <select id="produk">
+              <option value="">Pilih produk...</option>
+              <option>Ikan Lele Jumbo</option>
+              <option>Ikan Koi Premium</option>
+              <option>Pakan Koi Hokky</option>
+              <option>Media Filter</option>
+              <option>Obat Ikan</option>
+              <option>Konsultasi Budidaya</option>
+              <option>Lainnya</option>
             </select>
           </div>
+
           <div class="form-group">
             <label for="pesan">Pesan</label>
             <textarea id="pesan" rows="4" placeholder="Ceritakan kebutuhan Anda..."></textarea>
           </div>
+
           <div class="form-actions">
-            <button type="submit" class="btn-submit">
-              <i class="fas fa-paper-plane"></i> Kirim Pesan
-            </button>
-            <a href="https://wa.me/6287881482307?text=Halo%20Tirtatama%2C%20saya%20ingin%20konsultasi" target="_blank" rel="noopener" class="btn-wa">
-              <i class="fab fa-whatsapp"></i> WhatsApp
-            </a>
+            <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Kirim Pesan</button>
+            <a href="https://wa.me/6287881482307?text=Halo%20Tirtatama%2C%20saya%20ingin%20konsultasi" target="_blank" rel="noopener" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
           </div>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="#beranda" class="logo">
+        <a href="#beranda" class="logo" aria-label="Tirtatama Beranda">
           <div class="logo-icon">🐟</div>
           Tirta<span>tama</span>
         </a>
@@ -457,55 +545,56 @@
         <div class="footer-sosmed">
           <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://wa.me/6287881482307" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
           <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
           <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
         </div>
       </div>
+
       <div class="footer-links">
-        <h4>Layanan</h4>
+        <h4>Navigasi</h4>
         <ul>
-          <li><a href="#layanan"><i class="fas fa-fish"></i> Penjualan Ikan</a></li>
-          <li><a href="#layanan"><i class="fas fa-flask"></i> Konsultasi</a></li>
-          <li><a href="#budidaya"><i class="fas fa-seedling"></i> Budidaya</a></li>
-          <li><a href="#layanan"><i class="fas fa-truck"></i> Distribusi</a></li>
-          <li><a href="#layanan"><i class="fas fa-wifi"></i> IoT Monitoring</a></li>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#layanan">Layanan</a></li>
+          <li><a href="#produk-unggulan">Produk Unggulan</a></li>
+          <li><a href="#katalog">Katalog</a></li>
+          <li><a href="#kontak">Kontak</a></li>
         </ul>
       </div>
+
       <div class="footer-links">
         <h4>Produk</h4>
         <ul>
-          <li><a href="#produk">Ikan Bandeng</a></li>
-          <li><a href="#produk">Udang Vaname</a></li>
-          <li><a href="#produk">Ikan Nila</a></li>
-          <li><a href="#produk">Cumi-Cumi</a></li>
-          <li><a href="#produk-ikan">Katalog Lengkap</a></li>
+          <li><a href="#produk-unggulan">Ikan Lele Jumbo</a></li>
+          <li><a href="#produk-unggulan">Ikan Koi Premium</a></li>
+          <li><a href="#katalog">Pakan Koi</a></li>
+          <li><a href="#katalog">Media Filter</a></li>
+          <li><a href="#katalog">Obat Ikan</a></li>
         </ul>
       </div>
+
       <div class="footer-links">
-        <h4>Perusahaan</h4>
+        <h4>Kontak</h4>
         <ul>
-          <li><a href="#beranda">Tentang Kami</a></li>
-          <li><a href="#testimoni">Testimoni</a></li>
-          <li><a href="#kontak">Kontak</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Karir</a></li>
+          <li><a href="#kontak">Malang, Jawa Timur</a></li>
+          <li><a href="tel:+6287881482307">+62 878-8148-2307</a></li>
+          <li><a href="mailto:info@tirtatama.id">info@tirtatama.id</a></li>
+          <li><a href="#kontak">Jam Operasional</a></li>
         </ul>
       </div>
     </div>
+
     <div class="footer-bottom">
-      <p>© 2026 <a href="#beranda">Tirtatama.id</a> — All rights reserved. Dibuat dengan ❤️ untuk nelayan Indonesia.</p>
+      <p>&copy; 2026 Tirtatama. Semua hak dilindungi.</p>
     </div>
   </footer>
 
-  <!-- Scroll to top -->
-  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
-    <i class="fas fa-arrow-up"></i>
+  <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas">
+    <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- Toast notification -->
   <div class="toast" id="toast"></div>
 
-  <script src="scripts.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

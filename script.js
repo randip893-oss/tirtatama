@@ -1,122 +1,129 @@
-window.addEventListener('scroll', () => {
+document.addEventListener('DOMContentLoaded', () => {
   const navbar = document.getElementById('navbar');
-  const scrollTop = document.getElementById('scrollTop');
-
-  if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 60);
-  if (scrollTop) scrollTop.classList.toggle('show', window.scrollY > 400);
-}, { passive: true });
-
-const hamburger = document.getElementById('hamburger');
-const navMobile = document.getElementById('nav-mobile');
-
-if (hamburger && navMobile) {
-  hamburger.addEventListener('click', () => {
-    navMobile.classList.toggle('open');
-  });
-
-  navMobile.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => navMobile.classList.remove('open'));
-  });
-}
-
-const scrollTopBtn = document.getElementById('scrollTop');
-if (scrollTopBtn) {
-  scrollTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-}
-
-function filterIkan(kat, el) {
-  document.querySelectorAll('.pi-kat-badge').forEach(b => b.classList.remove('active'));
-  if (el) el.classList.add('active');
-
-  document.querySelectorAll('.pi-item').forEach(item => {
-    item.classList.toggle('hidden', kat !== 'semua' && item.dataset.kat !== kat);
-  });
-}
-
-function showToast(msg) {
+  const hamburger = document.getElementById('hamburger');
+  const navMobile = document.getElementById('nav-mobile');
+  const scrollTopBtn = document.getElementById('scrollTop');
   const toast = document.getElementById('toast');
-  if (!toast) return;
+  const particlesContainer = document.getElementById('particles');
+  const katalogGrid = document.getElementById('katalog-grid');
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const navLinks = document.querySelectorAll('.nav-links a, .nav-mobile a');
+  const sections = document.querySelectorAll('section[id]');
 
-  toast.textContent = msg;
-  toast.classList.add('show');
+  const showToast = (message, duration = 3000) => {
+    if (!toast) return;
+    toast.textContent = message;
+    toast.classList.add('show');
+    clearTimeout(window.__toastTimer);
+    window.__toastTimer = setTimeout(() => toast.classList.remove('show'), duration);
+  };
 
-  clearTimeout(window.__toastTimer);
-  window.__toastTimer = setTimeout(() => {
-    toast.classList.remove('show');
-  }, 3500);
-}
+  const setNavbarState = () => {
+    if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 60);
+    if (scrollTopBtn) scrollTopBtn.classList.toggle('show', window.scrollY > 400);
+  };
 
-function handleSubmit(event) {
-  event.preventDefault();
-  console.log("handleSubmit DIPANGGIL!"); 
-  
-  const nama = document.getElementById('nama').value || 'Tidak diisi';
-  const email = document.getElementById('email').value || 'Tidak diisi';
-  const layanan = document.getElementById('layanan').value || 'Tidak dipilih';
-  const pesan = document.getElementById('pesan').value || 'Tidak ada pesan';
+  const setActiveNav = () => {
+    let current = '';
+    const top = window.scrollY + 140;
 
-  console.log("Data:", {nama, email, layanan, pesan});
-  
-  const nomorWA = '6287881482307'; // GANTI NOMOR INI DENGAN NOMOR KAMU!
-  
-  const textWA = `🌊 *Konsultasi Tirtatama*\n\n` +
-                 `👤 Nama: ${nama}\n` +
-                 `📧 Email: ${email}\n` +
-                 `🎯 Layanan: ${layanan}\n` +
-                 `💬 Pesan: ${pesan}`;
+    sections.forEach((section) => {
+      if (top >= section.offsetTop) current = section.getAttribute('id');
+    });
 
-  const waLink = `https://wa.me/${nomorWA}?text=${encodeURIComponent(textWA)}`;
-  console.log("WA Link:", waLink);
-  
-  window.open(waLink, '_blank');
-  
-  // Toast
-  const toast = document.getElementById('toast');
-  toast.textContent = '✅ WhatsApp terbuka dengan data!';
-  toast.classList.add('show');
-  setTimeout(()=>toast.classList.remove('show'), 3000);
-}
+    navLinks.forEach((link) => {
+      const target = link.getAttribute('href');
+      link.classList.toggle('active', target === `#${current}`);
+    });
+  };
 
-(function createParticles() {
-  const container = document.getElementById('particles');
-  if (!container) return;
-
-  container.innerHTML = '';
-  const count = 18;
-
-  for (let i = 0; i < count; i++) {
-    const p = document.createElement('div');
-    p.className = 'particle';
-    const size = Math.random() * 5 + 3;
-
-    p.style.cssText = `
-      left: ${Math.random() * 100}%;
-      width: ${size}px;
-      height: ${size}px;
-      animation-duration: ${Math.random() * 12 + 8}s;
-      animation-delay: ${Math.random() * 10}s;
-      opacity: ${Math.random() * 0.5 + 0.2};
-    `;
-
-    container.appendChild(p);
-  }
-})();
-
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
-
-window.addEventListener('scroll', () => {
-  let current = '';
-
-  sections.forEach(section => {
-    if (window.scrollY >= section.offsetTop - 120) {
-      current = section.getAttribute('id');
+  const createParticles = () => {
+    if (!particlesContainer) return;
+    particlesContainer.innerHTML = '';
+    for (let i = 0; i < 24; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      const size = Math.random() * 6 + 3;
+      p.style.cssText = `
+        left: ${Math.random() * 100}%;
+        width: ${size}px;
+        height: ${size}px;
+        animation-duration: ${Math.random() * 12 + 8}s;
+        animation-delay: ${Math.random() * 8}s;
+        opacity: ${Math.random() * 0.5 + 0.18};
+      `;
+      particlesContainer.appendChild(p);
     }
-  });
+  };
 
-  navLinks.forEach(link => {
-    link.style.color = link.getAttribute('href') === '#' + current ? '#90e0ef' : '';
-  });
-}, { passive: true });
+  if (hamburger && navMobile) {
+    hamburger.addEventListener('click', () => {
+      navMobile.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', navMobile.classList.contains('open') ? 'true' : 'false');
+    });
+
+    navMobile.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => navMobile.classList.remove('open'));
+    });
+  }
+
+  if (scrollTopBtn) {
+    scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }
+
+  window.addEventListener('scroll', setNavbarState, { passive: true });
+  window.addEventListener('scroll', setActiveNav, { passive: true });
+
+  createParticles();
+  setNavbarState();
+  setActiveNav();
+
+  window.showDetail = function (type) {
+    if (type === 'lele') showToast('Detail Ikan Lele Jumbo sedang disiapkan.');
+    else if (type === 'koi') showToast('Detail Ikan Koi Premium sedang disiapkan.');
+    else showToast('Detail produk sedang disiapkan.');
+  };
+
+  window.handleSubmit = function (event) {
+    event.preventDefault();
+
+    const nama = document.getElementById('nama')?.value.trim() || 'Tidak diisi';
+    const email = document.getElementById('email')?.value.trim() || 'Tidak diisi';
+    const produk = document.getElementById('produk')?.value.trim() || 'Tidak dipilih';
+    const pesan = document.getElementById('pesan')?.value.trim() || 'Tidak ada pesan';
+
+    const nomorWA = '6287881482307';
+    const textWA =
+      `🌊 *Konsultasi Tirtatama*\n\n` +
+      `👤 Nama: ${nama}\n` +
+      `📧 Email: ${email}\n` +
+      `🎯 Produk: ${produk}\n` +
+      `💬 Pesan: ${pesan}`;
+
+    const waLink = `https://wa.me/${nomorWA}?text=${encodeURIComponent(textWA)}`;
+    window.open(waLink, '_blank', 'noopener,noreferrer');
+    showToast('✅ Pesan berhasil disiapkan untuk WhatsApp');
+  };
+
+  window.filterKatalog = function (kategori) {
+    if (!katalogGrid) return;
+
+    filterButtons.forEach((btn) => btn.classList.remove('active'));
+    const activeBtn = Array.from(filterButtons).find((btn) =>
+      btn.getAttribute('onclick')?.includes(`filterKatalog('${kategori}')`)
+    );
+    if (activeBtn) activeBtn.classList.add('active');
+
+    const cards = katalogGrid.querySelectorAll('.card-katalog');
+    cards.forEach((card) => {
+      const cardKategori = card.dataset.kategori || '';
+      card.style.display = kategori === 'all' || cardKategori === kategori ? '' : 'none';
+    });
+
+    showToast(`Filter: ${kategori === 'all' ? 'Semua Produk' : kategori}`);
+  };
+
+  window.loadMore = function () {
+    showToast('Fitur muat lebih banyak belum dihubungkan ke data tambahan.');
+  };
+});
